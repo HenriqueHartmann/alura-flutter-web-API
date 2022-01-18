@@ -1,7 +1,8 @@
+import 'package:bytebank/http/web_client.dart';
 import 'package:flutter/material.dart';
 import 'package:bytebank/screens/dashboard.dart';
 
-void main() { runApp(const BytebankApp()); }
+void main() { runApp(const BytebankApp()); findAll();}
 
 class BytebankApp extends StatelessWidget {
   const BytebankApp({Key? key}) : super(key: key);
