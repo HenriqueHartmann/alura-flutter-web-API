@@ -2,7 +2,10 @@ import 'package:bytebank/http/web_client.dart';
 import 'package:flutter/material.dart';
 import 'package:bytebank/screens/dashboard.dart';
 
-void main() { runApp(const BytebankApp()); findAll();}
+void main() {
+  runApp(const BytebankApp());
+  findAll().then((transactions) => print('new transactions $transactions'));
+}
 
 class BytebankApp extends StatelessWidget {
   const BytebankApp({Key? key}) : super(key: key);
