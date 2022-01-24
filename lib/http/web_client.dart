@@ -28,7 +28,9 @@ Future<List<Transaction>> findAll() async {
       requestTimeout: const Duration(seconds: 5)
   );
 
-  final Response response = await client.get(Uri.parse(endpoint + api));
+  final Response response = await client.get(
+      Uri.parse(endpoint + api)).timeout(const Duration(seconds: 5)
+  );
 
   final List<dynamic> decodedJson = jsonDecode(response.body);
   final List<Transaction> transactions = [];
